@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Khemia Properties Asset Management</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236c",
+            "primary-container": "#1b3a8a",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dbe1ff",
+            "primary-fixed-dim": "#b5c4ff",
+            "on-primary-fixed": "#00174d",
+            "on-primary-fixed-variant": "#244191",
+            "on-primary-container": "#8ea8ff",
+            "inverse-primary": "#b5c4ff",
+            "secondary": "#545d7e",
+            "secondary-container": "#cdd6fd",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#535c7d",
+            "secondary-fixed": "#dbe1ff",
+            "secondary-fixed-dim": "#bcc5eb",
+            "on-secondary-fixed": "#101a37",
+            "on-secondary-fixed-variant": "#3c4665",
+            "tertiary": "#755b00",
+            "tertiary-container": "#c8a74b",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#4f3d00",
+            "tertiary-fixed": "#ffe08f",
+            "tertiary-fixed-dim": "#e6c364",
+            "on-tertiary-fixed": "#241a00",
+            "on-tertiary-fixed-variant": "#584400",
+            "surface": "#faf8ff",
+            "surface-dim": "#dad9e1",
+            "surface-bright": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f3fa",
+            "surface-container": "#eeedf5",
+            "surface-container-high": "#e9e7ef",
+            "surface-container-highest": "#e3e1e9",
+            "surface-variant": "#e3e1e9",
+            "surface-tint": "#3f5aab",
+            "on-surface": "#1a1b21",
+            "on-surface-variant": "#444651",
+            "on-background": "#1a1b21",
+            "background": "#faf8ff",
+            "outline": "#757683",
+            "outline-variant": "#c4c6d3",
+            "inverse-surface": "#2f3036",
+            "inverse-on-surface": "#f1f0f7",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif", "Georgia", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px rgba(26, 27, 33, 0.06);
+    }
+    .glass-nav {
+      background: rgba(250, 248, 255, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-container selection:text-on-tertiary-container">
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="fixed top-0 w-full z-50 glass-nav">
+    <nav class="flex justify-between items-center px-6 md:px-20 py-4 md:py-5 w-full max-w-screen-xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-9 w-9">
+        <span class="text-base md:text-lg font-headline font-bold tracking-widest text-primary uppercase">Khemia Properties</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Portfolio</a>
+        <a href="services.html" class="text-primary border-b border-primary pb-0.5 text-sm font-medium">Services</a>
+        <a href="alistel.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Alistel</a>
+        <a href="contact.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">About</a>
+        <a href="contact.html" class="ml-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">Inquire Now</a>
+      </div>
+      <button class="md:hidden flex items-center justify-center" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-12">
+      <span class="text-xl font-headline font-bold tracking-widest text-surface uppercase">Khemia</span>
+      <button class="text-surface" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-8">
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="index.html" onclick="toggleMenu()">Portfolio</a>
+      <a class="font-headline text-3xl text-tertiary-container" href="services.html" onclick="toggleMenu()">Services</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="alistel.html" onclick="toggleMenu()">Alistel</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">About Us</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">Contact</a>
+    </nav>
+    <div class="mt-auto">
+      <a href="contact.html" onclick="toggleMenu()" class="block w-full py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg text-center">Inquire Now</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="relative h-[60vh] min-h-[500px] flex items-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlIsjIMSqgWc43qfXQOSVr-LvOJQHUatUBMdoceAYMOTdBF3RooEj5P3YQL2y5xV8d6-xoLFEJ84qauOpKXjn_RYdBlRLOAEm6bk1ROBjwrhMoBuk0TtA6OW3OV4xXiFA12zBE49XeGjEWnTl7QRZaaCxaK2LZaF8W8kLpEAj9aSxVRVtXuph5m3T2zxoO1MvDgCl1QFDOG5teacFRFy8YX0TEP0-4naUDtbFLiotRwtsdGtP7zJC_b3l4lozk1wwZuQ4w2dHFOeQG"
+          alt="Khemia luxury property management services"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+      </div>
+      <div class="relative z-10 px-6 md:px-20 pb-16 md:pb-24 max-w-screen-xl w-full">
+        <span class="inline-block text-tertiary-container font-label text-xs uppercase tracking-[0.2em] mb-4">Full Service Management</span>
+        <h1 class="font-headline text-4xl md:text-6xl text-surface font-bold leading-tight -tracking-wider">
+          From Upkeep to<br><em>Asset Growth</em>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ====== INTRO ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+        <div class="md:w-1/2">
+          <div class="w-16 h-1 bg-tertiary-container mb-10"></div>
+          <h2 class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-6">
+            End-to-End Excellence
+          </h2>
+        </div>
+        <div class="md:w-1/2 space-y-5 text-on-surface-variant text-base leading-relaxed">
+          <p>Khemia Properties delivers a comprehensive suite of asset management services, combining institutional-grade financial oversight with the personal touch of a five-star hospitality brand.</p>
+          <p>Every service is designed around one principle: your property is not just a place — it is a performing investment. We manage it accordingly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES GRID ====== -->
+    <section class="py-12 md:py-16 px-6 md:px-20 bg-surface-container-low">
+      <div class="max-w-screen-xl mx-auto space-y-6">
+
+        <!-- Service 01: Property Marketing -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-surface rounded-xl overflow-hidden editorial-shadow">
+          <div class="p-10 md:p-14 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-surface text-xl">campaign</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.2em] text-tertiary">Service 01</span>
+            </div>
+            <h2 class="font-headline text-2xl md:text-3xl text-primary font-bold mb-4">Property Marketing</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Multi-platform listing strategy and optimization to maximize visibility, occupancy, and nightly rates across every major booking channel.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Professional photography & virtual tours
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Airbnb, Booking.com & direct channel management
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Dynamic pricing algorithms to maximize revenue
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                SEO-optimized listing copy and editorial content
+              </li>
+            </ul>
+          </div>
+          <div class="bg-surface-container-high min-h-64 md:min-h-auto overflow-hidden">
+            <img
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghWbL6s7DBIfhFh8K6pKrOIij71l2lNLhDuSzl2wgTPq4EWwIO3lOs1I4l0JfPjjegCePJRqn8CaCe0O4o7X4Y9wuktWTFPwlK89SXiKsm3k9lAlrp4N2bhyj4QN6d8freklS_973i_jyl0sCiQqnuT9mbZE8o1fCgk4uqSulWtkVwvsvIr62NR3mq7TBaZsuxVuItobzfb-8rwQUpj6pUJPBaJgqtOxwtmAOGETLq3nSF860x7DE5aXIev0IKqsgnigG1iXAVqS8"
+              alt="Property marketing and photography"
+            >
+          </div>
+        </div>
+
+        <!-- Service 02: Guest Relations -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-surface rounded-xl overflow-hidden editorial-shadow">
+          <div class="bg-primary min-h-64 md:min-h-auto overflow-hidden order-2 md:order-1">
+            <img
+              class="w-full h-full object-cover opacity-40 hover:opacity-50 transition-opacity duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr4WrI_OkznoPhbarnIwnimaZK_O63Su9EoIpIsAN3n8h1AhnJWbRN8uMHEfugINEJbUnHD7kWXjfBUnHD7k_YCB89Zns29n98r59iNc8uiK0sesRIcY3gPGMxWUTQtfL8KcI2BVsdFDbmvDfaIratadYGJ38qK_dKD3oUyGfm2XgqsytOEsmu2r2DEPQiqiDYGB4RX3Ahe4mZ59-V3ozU2EubelIFT17Fxgu-TXjfBGr"
+              alt="Guest relations and hospitality"
+            >
+          </div>
+          <div class="p-10 md:p-14 flex flex-col justify-center order-1 md:order-2">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 flex-shrink-0 bg-tertiary-container rounded-xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-on-tertiary-container text-xl">concierge</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.2em] text-tertiary">Service 02</span>
+            </div>
+            <h2 class="font-headline text-2xl md:text-3xl text-primary font-bold mb-4">Guest Relations</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Khemia's signature white-glove hospitality framework — from the first inquiry to post-stay reviews — engineered to deliver 5.0-star experiences consistently.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                24/7 guest communication and support
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Seamless check-in / check-out coordination
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Curated welcome amenities and local experiences
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Review management and reputation strategy
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 03: Maintenance -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-surface rounded-xl overflow-hidden editorial-shadow">
+          <div class="p-10 md:p-14 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-surface text-xl">home_repair_service</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.2em] text-tertiary">Service 03</span>
+            </div>
+            <h2 class="font-headline text-2xl md:text-3xl text-primary font-bold mb-4">Maintenance & Upkeep</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Proactive property care that protects asset value, prevents costly surprises, and ensures your property remains in showcase condition year-round.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Scheduled preventive maintenance programs
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Vetted contractor and vendor network
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Emergency response within 2 hours
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Photo documentation and owner reporting
+              </li>
+            </ul>
+          </div>
+          <div class="bg-surface-container-high min-h-64 md:min-h-auto overflow-hidden">
+            <img
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBSnxg5hg1xLYLYxIhAmDEfVuaqiN8GiL3t-hQe3T7J8LtSL1jB13B_MYj9RJKW8u8eZT1wJ_adaOeL8RWacnrERhkVHsVVDoxU0IPCTtXwj7LsCl_hzMviQwQhemhZ1fMEtAkQ5xEBogFLorKKmHGrSUBVCOCsF3Vqa0qq7UbZB-xNgf8fR8jHVzlw2bqem28hUS3THdAYc1NbKTP2jD5iiZRFZC9nrm-spoBowwz9oc4y7KYr8-K9gf9qQuCEOzCi9GctbAWtTM7"
+              alt="Property maintenance and upkeep"
+            >
+          </div>
+        </div>
+
+        <!-- Service 04: Financial Reporting -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-surface rounded-xl overflow-hidden editorial-shadow">
+          <div class="bg-surface-container-low min-h-64 md:min-h-auto overflow-hidden flex items-center justify-center p-10 order-2 md:order-1">
+            <div class="text-center">
+              <div class="grid grid-cols-2 gap-6 mb-6">
+                <div class="bg-surface p-6 rounded-xl editorial-shadow">
+                  <p class="font-headline text-3xl text-primary font-bold mb-1">₱2.4M</p>
+                  <p class="text-on-surface-variant text-[10px] uppercase tracking-widest">Annual Revenue</p>
+                </div>
+                <div class="bg-surface p-6 rounded-xl editorial-shadow">
+                  <p class="font-headline text-3xl text-primary font-bold mb-1">28%</p>
+                  <p class="text-on-surface-variant text-[10px] uppercase tracking-widest">ROI</p>
+                </div>
+                <div class="bg-surface p-6 rounded-xl editorial-shadow">
+                  <p class="font-headline text-3xl text-primary font-bold mb-1">95%</p>
+                  <p class="text-on-surface-variant text-[10px] uppercase tracking-widest">Occupancy</p>
+                </div>
+                <div class="bg-tertiary-container p-6 rounded-xl">
+                  <p class="font-headline text-3xl text-on-tertiary-container font-bold mb-1">↑34%</p>
+                  <p class="text-on-tertiary-container/70 text-[10px] uppercase tracking-widest">YoY Growth</p>
+                </div>
+              </div>
+              <p class="text-on-surface-variant text-xs">Sample asset performance dashboard</p>
+            </div>
+          </div>
+          <div class="p-10 md:p-14 flex flex-col justify-center order-1 md:order-2">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 flex-shrink-0 bg-tertiary-container rounded-xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-on-tertiary-container text-xl">bar_chart</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.2em] text-tertiary">Service 04</span>
+            </div>
+            <h2 class="font-headline text-2xl md:text-3xl text-primary font-bold mb-4">Financial Reporting</h2>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Institutional-grade financial transparency that gives you a clear, data-driven view of your asset's performance — every month, every quarter.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Monthly P&amp;L statements and reconciliations
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Occupancy analytics and revenue benchmarking
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Quarterly ROI projections and market analysis
+              </li>
+              <li class="flex items-center gap-3 text-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Owner dashboard with real-time booking data
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 05: Asset Optimization -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-primary rounded-xl overflow-hidden editorial-shadow">
+          <div class="p-10 md:p-14 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 flex-shrink-0 bg-tertiary-container rounded-xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-on-tertiary-container text-xl">trending_up</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.2em] text-tertiary-container">Service 05</span>
+            </div>
+            <h2 class="font-headline text-2xl md:text-3xl text-surface font-bold mb-4">Asset Optimization</h2>
+            <p class="text-surface/70 leading-relaxed mb-6">Strategic guidance to actively grow your property's market value, rental income, and long-term investment return over time.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-surface/80">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Renovation ROI analysis and capital planning
+              </li>
+              <li class="flex items-center gap-3 text-sm text-surface/80">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Competitive market positioning strategy
+              </li>
+              <li class="flex items-center gap-3 text-sm text-surface/80">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Seasonal yield management and rate optimization
+              </li>
+              <li class="flex items-center gap-3 text-sm text-surface/80">
+                <span class="w-1.5 h-1.5 bg-tertiary-container rounded-full flex-shrink-0"></span>
+                Portfolio expansion and acquisition advisory
+              </li>
+            </ul>
+          </div>
+          <div class="min-h-64 md:min-h-auto flex items-center justify-center p-10 md:p-14">
+            <div class="text-center">
+              <p class="font-headline text-7xl text-tertiary-container font-bold mb-4">28%</p>
+              <p class="text-surface/60 font-label text-xs uppercase tracking-widest mb-8">Average ROI Delivered</p>
+              <div class="h-px w-16 bg-tertiary-container/30 mx-auto mb-8"></div>
+              <p class="font-headline text-3xl text-surface italic">"We treat your property as we would an institutional portfolio."</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== WHY KHEMIA ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-16 text-center">
+          <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-4 block">Our Advantage</span>
+          <h2 class="font-headline text-3xl md:text-5xl text-primary font-bold">Why Property Owners Choose Khemia</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+            </div>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Proven Track Record</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Our flagship property Alistel ranks in the Top 1% of Airbnb performers nationwide with a perfect 5.0 rating.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+            </div>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Deep Local Expertise</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Rooted in the Philippine market with specialized knowledge of prime coastal and urban investment corridors.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="material-symbols-outlined text-primary text-2xl">handshake</span>
+            </div>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Owner-First Alignment</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Our performance-based fee structure ensures our incentives are perfectly aligned with maximizing your returns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="py-32 md:py-40 px-6 md:px-20 text-center bg-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06]">
+        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBwoYqj3OUoQ9Y0xfbAkGKQ-QrPQzMV20KJX5ZXcrDwI3F-HHuY3S7ygciK3cmJ__dn1_NBLA_xKpRJ58bi8lC0XB-LunJYmDo4rlip-e2inzbddYc55Y-pBy9wglGKi1wF7msN2N9QJTmQndENVDHi3ObRH5fzJpqLCEZdN0Ul1TsdrIMNPA4B5ki-hQ6MWOjUE175Gg9CS1JOKWuWJrkv8nUyIlXRdZQFNR-xniwtHnaokKDUSZZ_5msvdmmXcL08" alt="">
+      </div>
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <span class="text-tertiary-container font-bold tracking-[0.2em] text-xs uppercase mb-8 block">Get Started</span>
+        <h2 class="font-headline text-4xl md:text-5xl text-surface leading-tight mb-6 -tracking-wider">
+          Ready to Maximize<br>Your Asset's Potential?
+        </h2>
+        <p class="text-surface/70 mb-12 leading-relaxed">Schedule a private consultation with our investment curators. No obligation, just clarity on what your property can achieve.</p>
+        <a href="contact.html" class="inline-block px-10 py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg hover:opacity-90 transition-opacity">Schedule Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-surface-container-low w-full py-16">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-8 w-8">
+          <span class="text-base font-headline font-bold text-primary tracking-widest uppercase">Khemia</span>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Elevating Philippine real estate from passive property to high-performing investment.</p>
+        <p class="text-on-surface-variant text-xs">© 2024 Khemia Properties. The Digital Curator.</p>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="index.html">Portfolio</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="services.html">Management Services</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="alistel.html">Alistel Showcase</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="contact.html">Investor Relations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Legal</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Investment Disclosure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Contact</h4>
+        <p class="text-on-surface-variant text-sm mb-2">Manila, Philippines</p>
+        <p class="text-on-surface-variant text-sm mb-2">San Juan, La Union</p>
+        <a href="mailto:concierge@khemia.com" class="text-on-surface-variant text-sm hover:text-primary transition-colors">concierge@khemia.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-2 pt-2 pb-4">
+    <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">domain</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Portfolio</span>
+    </a>
+    <a href="services.html" class="flex flex-col items-center justify-center text-primary px-2 py-1">
+      <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">home_repair_service</span>
+      <span class="font-label text-[9px] font-bold uppercase tracking-wider mt-1">Services</span>
+    </a>
+    <a href="alistel.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">bungalow</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Alistel</span>
+    </a>
+    <a href="contact.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">mail</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Contact</span>
+    </a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        menu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.remove('translate-x-0');
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+
+</body>
+</html>

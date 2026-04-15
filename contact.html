@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner With Us | Khemia Properties</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236c",
+            "primary-container": "#1b3a8a",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dbe1ff",
+            "primary-fixed-dim": "#b5c4ff",
+            "on-primary-fixed": "#00174d",
+            "on-primary-fixed-variant": "#244191",
+            "on-primary-container": "#8ea8ff",
+            "inverse-primary": "#b5c4ff",
+            "secondary": "#545d7e",
+            "secondary-container": "#cdd6fd",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#535c7d",
+            "secondary-fixed": "#dbe1ff",
+            "secondary-fixed-dim": "#bcc5eb",
+            "on-secondary-fixed": "#101a37",
+            "on-secondary-fixed-variant": "#3c4665",
+            "tertiary": "#755b00",
+            "tertiary-container": "#c8a74b",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#4f3d00",
+            "tertiary-fixed": "#ffe08f",
+            "tertiary-fixed-dim": "#e6c364",
+            "on-tertiary-fixed": "#241a00",
+            "on-tertiary-fixed-variant": "#584400",
+            "surface": "#faf8ff",
+            "surface-dim": "#dad9e1",
+            "surface-bright": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f3fa",
+            "surface-container": "#eeedf5",
+            "surface-container-high": "#e9e7ef",
+            "surface-container-highest": "#e3e1e9",
+            "surface-variant": "#e3e1e9",
+            "surface-tint": "#3f5aab",
+            "on-surface": "#1a1b21",
+            "on-surface-variant": "#444651",
+            "on-background": "#1a1b21",
+            "background": "#faf8ff",
+            "outline": "#757683",
+            "outline-variant": "#c4c6d3",
+            "inverse-surface": "#2f3036",
+            "inverse-on-surface": "#f1f0f7",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif", "Georgia", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px rgba(26, 27, 33, 0.06);
+    }
+    .glass-nav {
+      background: rgba(250, 248, 255, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    /* Signature-line inputs */
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      outline: none;
+      border-radius: 0;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+      border-color: #00236c;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="fixed top-0 w-full z-50 glass-nav">
+    <nav class="flex justify-between items-center px-6 md:px-20 py-4 md:py-5 w-full max-w-screen-xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-9 w-9">
+        <span class="text-base md:text-lg font-headline font-bold tracking-widest text-primary uppercase">Khemia Properties</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Portfolio</a>
+        <a href="services.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Services</a>
+        <a href="alistel.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Alistel</a>
+        <a href="contact.html" class="text-primary border-b border-primary pb-0.5 text-sm font-medium">About</a>
+        <a href="contact.html" class="ml-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">Inquire Now</a>
+      </div>
+      <button class="md:hidden flex items-center justify-center" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-12">
+      <span class="text-xl font-headline font-bold tracking-widest text-surface uppercase">Khemia</span>
+      <button class="text-surface" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-8">
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="index.html" onclick="toggleMenu()">Portfolio</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="services.html" onclick="toggleMenu()">Services</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="alistel.html" onclick="toggleMenu()">Alistel</a>
+      <a class="font-headline text-3xl text-tertiary-container" href="contact.html" onclick="toggleMenu()">About Us</a>
+      <a class="font-headline text-3xl text-tertiary-container" href="contact.html" onclick="toggleMenu()">Contact</a>
+    </nav>
+    <div class="mt-auto">
+      <a href="contact.html" onclick="toggleMenu()" class="block w-full py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg text-center">Inquire Now</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="relative h-[55vh] min-h-[400px] flex items-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlIsjIMSqgWc43qfXQOSVr-LvOJQHUatUBMdoceAYMOTdBF3RooEj5P3YQL2y5xV8d6-xoLFEJ84qauOpKXjn_RYdBlRLOAEm6bk1ROBjwrhMoBuk0TtA6OW3OV4xXiFA12zBE49XeGjEWnTl7QRZaaCxaK2LZaF8W8kLpEAj9aSxVRVtXuph5m3T2zxoO1MvDgCl1QFDOG5teacFRFy8YX0TEP0-4naUDtbFLiotRwtsdGtP7zJC_b3l4lozk1wwZuQ4w2dHFOeQG"
+          alt="Khemia Properties — luxury real estate Philippines"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+      </div>
+      <div class="relative z-10 px-6 md:px-20 pb-16 md:pb-24 max-w-screen-xl w-full">
+        <span class="inline-block text-tertiary-container font-label text-xs uppercase tracking-[0.2em] mb-4">Institutional Excellence</span>
+        <h1 class="font-headline text-4xl md:text-6xl text-surface font-bold leading-tight -tracking-wider">
+          Partner with Khemia.<br><em>Elevate Your Asset.</em>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <section class="py-16 md:py-24 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+        <!-- Form Card -->
+        <div class="bg-surface-container-lowest p-8 md:p-12 editorial-shadow rounded-xl">
+          <div class="mb-8">
+            <h2 class="font-headline text-2xl md:text-3xl text-primary mb-3">Property Inquiry</h2>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Submit your asset details for a private consultation with our investment curators.</p>
+          </div>
+          <form class="space-y-8" onsubmit="handleSubmit(event)">
+            <div>
+              <label class="block text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Full Name</label>
+              <input
+                class="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-primary text-on-surface text-sm placeholder:text-outline-variant/50 transition-colors duration-200"
+                placeholder="E.g. Alexander Hamilton"
+                type="text"
+                required
+              >
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label class="block text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Email Address</label>
+                <input
+                  class="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-primary text-on-surface text-sm placeholder:text-outline-variant/50 transition-colors duration-200"
+                  placeholder="you@domain.com"
+                  type="email"
+                  required
+                >
+              </div>
+              <div>
+                <label class="block text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Phone Number</label>
+                <input
+                  class="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-primary text-on-surface text-sm placeholder:text-outline-variant/50 transition-colors duration-200"
+                  placeholder="+63 900 000 0000"
+                  type="tel"
+                >
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Property Location</label>
+              <input
+                class="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-primary text-on-surface text-sm placeholder:text-outline-variant/50 transition-colors duration-200"
+                placeholder="Manila, La Union, Cebu, Palawan..."
+                type="text"
+              >
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Property Type</label>
+              <select class="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-primary text-on-surface text-sm transition-colors duration-200 cursor-pointer">
+                <option value="" class="text-outline-variant">Select property type...</option>
+                <option value="villa">Beachfront Villa</option>
+                <option value="condo">Condominium Unit</option>
+                <option value="house">House & Lot</option>
+                <option value="commercial">Commercial Property</option>
+                <option value="land">Raw Land</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Tell Us About Your Property</label>
+              <textarea
+                class="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-primary text-on-surface text-sm placeholder:text-outline-variant/50 resize-none transition-colors duration-200"
+                placeholder="Briefly describe the architectural style, current use, and your asset goals..."
+                rows="4"
+              ></textarea>
+            </div>
+            <button
+              class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold text-sm tracking-widest uppercase rounded-lg editorial-shadow hover:opacity-90 active:scale-[0.98] transition-all"
+              type="submit"
+            >
+              Submit Inquiry
+            </button>
+          </form>
+          <!-- Success message (hidden initially) -->
+          <div id="success-msg" class="hidden mt-6 p-5 bg-surface-container-low rounded-lg text-center">
+            <span class="material-symbols-outlined text-primary text-3xl mb-3 block" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <p class="font-headline text-primary text-lg mb-1">Inquiry Received</p>
+            <p class="text-on-surface-variant text-sm">Our investment curators will reach out within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Info + Trust -->
+        <div class="space-y-12">
+
+          <!-- Intro text -->
+          <div>
+            <div class="w-12 h-1 bg-tertiary-container mb-8"></div>
+            <h2 class="font-headline text-2xl md:text-3xl text-primary mb-4">Private Consultation</h2>
+            <p class="text-on-surface-variant leading-relaxed">
+              Every partnership begins with a confidential conversation. Our investment curators will assess your property's current state, discuss your goals, and present a tailored asset management strategy — at no cost or obligation.
+            </p>
+          </div>
+
+          <!-- Office Locations -->
+          <div>
+            <h3 class="text-primary font-headline text-lg font-bold mb-6">Office Directory</h3>
+            <div class="space-y-4">
+              <div class="flex gap-4 p-5 bg-surface-container-low rounded-xl">
+                <span class="material-symbols-outlined text-tertiary-container flex-shrink-0 mt-0.5">location_on</span>
+                <div>
+                  <p class="font-bold text-primary text-xs uppercase tracking-wider mb-1">Metro Manila HQ</p>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">Level 42, The Estate Tower, Makati Central Business District</p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-5 bg-surface-container-low rounded-xl">
+                <span class="material-symbols-outlined text-tertiary-container flex-shrink-0 mt-0.5">beach_access</span>
+                <div>
+                  <p class="font-bold text-primary text-xs uppercase tracking-wider mb-1">Coastal Estate Office</p>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">Surfside Estates, San Juan, La Union</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Channels -->
+          <div>
+            <h3 class="text-primary font-headline text-lg font-bold mb-6">Direct Channels</h3>
+            <div class="space-y-4">
+              <a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group" href="mailto:partnerships@khemia.com">
+                <span class="material-symbols-outlined text-primary group-hover:text-tertiary-container transition-colors">mail</span>
+                <span class="text-sm">partnerships@khemia.com</span>
+              </a>
+              <a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group" href="tel:+63288880000">
+                <span class="material-symbols-outlined text-primary group-hover:text-tertiary-container transition-colors">call</span>
+                <span class="text-sm">+63 (2) 8888 0000</span>
+              </a>
+              <a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group" href="#">
+                <span class="material-symbols-outlined text-primary group-hover:text-tertiary-container transition-colors">send</span>
+                <span class="text-sm">Telegram / Viber Available</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-outline-variant/20">
+            <div class="flex gap-6 mb-6 text-primary">
+              <span class="material-symbols-outlined hover:text-tertiary-container transition-colors cursor-pointer">public</span>
+              <span class="material-symbols-outlined hover:text-tertiary-container transition-colors cursor-pointer">verified</span>
+              <span class="material-symbols-outlined hover:text-tertiary-container transition-colors cursor-pointer">account_balance</span>
+            </div>
+            <div class="space-y-1">
+              <p class="text-[10px] font-bold text-primary uppercase tracking-[0.3em]">Institutional Grade Assets</p>
+              <p class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em]">Philippine Estate Registry #44921</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FAQ / PROCESS ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface-container-low">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-16 text-center">
+          <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-4 block">The Process</span>
+          <h2 class="font-headline text-3xl md:text-4xl text-primary font-bold">What Happens Next</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="font-headline text-surface font-bold">01</span>
+            </div>
+            <h3 class="font-headline text-base text-primary font-bold mb-3">Submit Inquiry</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Complete the inquiry form with your property details and investment goals.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="font-headline text-primary font-bold">02</span>
+            </div>
+            <h3 class="font-headline text-base text-primary font-bold mb-3">Initial Call</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">A curator contacts you within 24 hours for a brief discovery conversation.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="font-headline text-primary font-bold">03</span>
+            </div>
+            <h3 class="font-headline text-base text-primary font-bold mb-3">Property Assessment</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">We conduct a detailed assessment of your property's current and projected performance.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="material-symbols-outlined text-on-tertiary-container text-lg">handshake</span>
+            </div>
+            <h3 class="font-headline text-base text-primary font-bold mb-3">Partnership Proposal</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Receive a tailored management proposal with projected ROI and service terms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-surface-container-low w-full py-16">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex items-center gap-3">
+        <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-8 w-8">
+        <span class="font-headline font-bold text-primary tracking-widest uppercase text-base">Khemia Properties</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 text-[10px] font-label font-medium uppercase tracking-widest text-on-surface-variant">
+        <a class="hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Privacy Policy</a>
+        <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+        <a class="hover:text-primary transition-colors" href="#">Investor Relations</a>
+      </div>
+      <p class="font-body text-xs text-on-surface-variant opacity-70 text-center">© 2024 Khemia Properties. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-2 pt-2 pb-4">
+    <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">domain</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Portfolio</span>
+    </a>
+    <a href="services.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">home_repair_service</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Services</span>
+    </a>
+    <a href="alistel.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">bungalow</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Alistel</span>
+    </a>
+    <a href="contact.html" class="flex flex-col items-center justify-center text-primary px-2 py-1">
+      <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">mail</span>
+      <span class="font-label text-[9px] font-bold uppercase tracking-wider mt-1">Contact</span>
+    </a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        menu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.remove('translate-x-0');
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      form.style.display = 'none';
+      document.getElementById('success-msg').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>

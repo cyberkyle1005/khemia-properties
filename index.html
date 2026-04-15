@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khemia Properties | Prestige Asset Management Philippines</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236c",
+            "primary-container": "#1b3a8a",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dbe1ff",
+            "primary-fixed-dim": "#b5c4ff",
+            "on-primary-fixed": "#00174d",
+            "on-primary-fixed-variant": "#244191",
+            "on-primary-container": "#8ea8ff",
+            "inverse-primary": "#b5c4ff",
+            "secondary": "#545d7e",
+            "secondary-container": "#cdd6fd",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#535c7d",
+            "secondary-fixed": "#dbe1ff",
+            "secondary-fixed-dim": "#bcc5eb",
+            "on-secondary-fixed": "#101a37",
+            "on-secondary-fixed-variant": "#3c4665",
+            "tertiary": "#755b00",
+            "tertiary-container": "#c8a74b",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#4f3d00",
+            "tertiary-fixed": "#ffe08f",
+            "tertiary-fixed-dim": "#e6c364",
+            "on-tertiary-fixed": "#241a00",
+            "on-tertiary-fixed-variant": "#584400",
+            "surface": "#faf8ff",
+            "surface-dim": "#dad9e1",
+            "surface-bright": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f3fa",
+            "surface-container": "#eeedf5",
+            "surface-container-high": "#e9e7ef",
+            "surface-container-highest": "#e3e1e9",
+            "surface-variant": "#e3e1e9",
+            "surface-tint": "#3f5aab",
+            "on-surface": "#1a1b21",
+            "on-surface-variant": "#444651",
+            "on-background": "#1a1b21",
+            "background": "#faf8ff",
+            "outline": "#757683",
+            "outline-variant": "#c4c6d3",
+            "inverse-surface": "#2f3036",
+            "inverse-on-surface": "#f1f0f7",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif", "Georgia", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px rgba(26, 27, 33, 0.06);
+    }
+    .glass-nav {
+      background: rgba(250, 248, 255, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="fixed top-0 w-full z-50 glass-nav">
+    <nav class="flex justify-between items-center px-6 md:px-20 py-4 md:py-5 w-full max-w-screen-xl mx-auto">
+      <!-- Logo + Brand -->
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-9 w-9">
+        <span class="text-base md:text-lg font-headline font-bold tracking-widest text-primary uppercase">Khemia Properties</span>
+      </a>
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-primary border-b border-primary pb-0.5 text-sm font-medium">Portfolio</a>
+        <a href="services.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Services</a>
+        <a href="alistel.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Alistel</a>
+        <a href="contact.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">About</a>
+        <a href="contact.html" class="ml-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">Inquire Now</a>
+      </div>
+      <!-- Mobile Hamburger -->
+      <button class="md:hidden flex items-center justify-center" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-12">
+      <span class="text-xl font-headline font-bold tracking-widest text-surface uppercase">Khemia</span>
+      <button class="text-surface" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-8">
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="index.html" onclick="toggleMenu()">Portfolio</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="services.html" onclick="toggleMenu()">Services</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="alistel.html" onclick="toggleMenu()">Alistel</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">About Us</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">Contact</a>
+    </nav>
+    <div class="mt-auto space-y-4">
+      <a href="contact.html" onclick="toggleMenu()" class="block w-full py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg text-center">Inquire Now</a>
+      <div class="flex gap-6 text-surface/50 pt-4">
+        <span class="material-symbols-outlined cursor-pointer hover:text-tertiary-container transition-colors">share</span>
+        <span class="material-symbols-outlined cursor-pointer hover:text-tertiary-container transition-colors">language</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="relative h-screen min-h-[700px] flex items-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxFOSOYEQY0_ZiNJK6ybevwddjApOs4ieYqgngHGJjab9JSabLzI1d4RGhV2hQjqOYXSrRgN2GFcrOKhJdc6xF7c_JD07o2XJOOQQkPvTwXolcmPRxQ8snxUglwQlS2ANku-Fa8WOXTWdrskMuBoUO7hExSWsi3F6RDaFFyjVGp3dF47OLp8_3Jf7bzqBiO4ZSIxRBhmttqyKwcjz8LXBqTfuwC1WEJrkv8nUyIlXRdZQFNR-xniwtHnaokKDUSZZ_5msvdmmXcL08"
+          alt="Luxury coastal villa in the Philippines at golden hour"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent"></div>
+      </div>
+      <div class="relative z-10 w-full px-6 md:px-20 pb-20 md:pb-32">
+        <div class="max-w-xl md:max-w-3xl">
+          <span class="inline-block text-tertiary-container font-label text-xs uppercase tracking-[0.2em] mb-6">Institutional Excellence · Philippines</span>
+          <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl text-surface font-bold leading-tight mb-6 -tracking-wider">
+            Your Real Estate,<br>Managed as a<br>Strategic Asset.
+          </h1>
+          <p class="text-surface/80 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
+            From coastal villas to urban investments — Khemia Properties elevates Philippine real estate into high-performing, institutional-grade assets.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="contact.html" class="px-8 py-4 bg-tertiary-container text-on-tertiary-container font-bold tracking-wide rounded-lg text-sm uppercase text-center hover:opacity-90 transition-opacity">Partner With Us</a>
+            <a href="alistel.html" class="px-8 py-4 border border-surface/30 text-surface font-semibold rounded-lg text-sm uppercase text-center backdrop-blur-sm hover:bg-surface/10 transition-colors">Explore Alistel →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-60">
+        <span class="text-surface font-label text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+        <span class="material-symbols-outlined text-surface text-lg">keyboard_arrow_down</span>
+      </div>
+    </section>
+
+    <!-- ====== THE KHEMIA DISTINCTION ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-16 md:mb-20">
+          <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-4 block">The Difference</span>
+          <h2 class="font-headline text-3xl md:text-5xl text-primary font-bold mb-4">The Khemia Distinction</h2>
+          <p class="text-on-surface-variant max-w-lg leading-relaxed">Redefining property management through a specialized investment lens.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <!-- Traditional -->
+          <div class="p-8 md:p-10 bg-surface-container-low rounded-xl">
+            <h3 class="font-headline text-xl text-on-surface-variant font-bold mb-6 opacity-60">Traditional Management</h3>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-3 text-on-surface-variant/70 text-sm">
+                <span class="material-symbols-outlined text-lg mt-0.5 flex-shrink-0">remove_circle_outline</span>
+                <span>Passive maintenance and reactive repair tracking.</span>
+              </li>
+              <li class="flex items-start gap-3 text-on-surface-variant/70 text-sm">
+                <span class="material-symbols-outlined text-lg mt-0.5 flex-shrink-0">remove_circle_outline</span>
+                <span>Standardized, non-strategic tenant sourcing.</span>
+              </li>
+              <li class="flex items-start gap-3 text-on-surface-variant/70 text-sm">
+                <span class="material-symbols-outlined text-lg mt-0.5 flex-shrink-0">remove_circle_outline</span>
+                <span>Basic accounting without ROI optimization.</span>
+              </li>
+              <li class="flex items-start gap-3 text-on-surface-variant/70 text-sm">
+                <span class="material-symbols-outlined text-lg mt-0.5 flex-shrink-0">remove_circle_outline</span>
+                <span>No market intelligence or competitive repositioning.</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Khemia -->
+          <div class="p-8 md:p-10 bg-primary text-surface rounded-xl relative overflow-hidden editorial-shadow">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-tertiary-container/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
+            <h3 class="font-headline text-xl font-bold mb-8 text-tertiary-container">Khemia Asset Management</h3>
+            <div class="space-y-8 relative z-10">
+              <div class="flex items-center gap-5">
+                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-tertiary-container text-on-tertiary-container rounded-full">
+                  <span class="material-symbols-outlined text-xl">trending_up</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm tracking-wide uppercase mb-1">Growth Strategy</h4>
+                  <p class="text-surface/70 text-xs leading-relaxed">Aggressive appreciation and yield optimization strategies.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-5">
+                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-tertiary-container text-on-tertiary-container rounded-full">
+                  <span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm tracking-wide uppercase mb-1">Financial Reporting</h4>
+                  <p class="text-surface/70 text-xs leading-relaxed">Institutional-grade transparency with real-time dashboards.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-5">
+                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-tertiary-container text-on-tertiary-container rounded-full">
+                  <span class="material-symbols-outlined text-xl">insights</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm tracking-wide uppercase mb-1">Market Intelligence</h4>
+                  <p class="text-surface/70 text-xs leading-relaxed">Real-time competitive data to drive portfolio decisions.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-5">
+                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-tertiary-container text-on-tertiary-container rounded-full">
+                  <span class="material-symbols-outlined text-xl">concierge</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm tracking-wide uppercase mb-1">White-Glove Hospitality</h4>
+                  <p class="text-surface/70 text-xs leading-relaxed">Guest experience management that drives 5-star reviews.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PERFORMANCE STATS ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-primary overflow-hidden relative">
+      <div class="absolute top-0 right-0 opacity-[0.07] translate-x-1/4 -translate-y-1/4">
+        <span class="material-symbols-outlined text-[30rem] text-surface">query_stats</span>
+      </div>
+      <div class="max-w-screen-xl mx-auto relative z-10">
+        <h2 class="font-headline text-white text-3xl md:text-5xl mb-16 md:mb-20 text-center">Institutional Performance</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10">
+          <div class="text-center md:px-12 py-8">
+            <p class="text-tertiary-container font-headline text-5xl md:text-6xl mb-4">Top 1%</p>
+            <p class="text-white/70 font-label tracking-widest uppercase text-xs">Airbnb Performer</p>
+          </div>
+          <div class="text-center md:px-12 py-8">
+            <p class="text-tertiary-container font-headline text-5xl md:text-6xl mb-4">95%</p>
+            <p class="text-white/70 font-label tracking-widest uppercase text-xs">Occupancy Rate</p>
+          </div>
+          <div class="text-center md:px-12 py-8">
+            <p class="text-tertiary-container font-headline text-5xl md:text-6xl mb-4">5.0</p>
+            <div class="flex justify-center gap-1 mb-2">
+              <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-white/70 font-label tracking-widest uppercase text-xs">Guest Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ALISTEL SPOTLIGHT ====== -->
+    <section class="py-24 md:py-32 bg-surface-container-low overflow-hidden">
+      <div class="max-w-screen-xl mx-auto px-6 md:px-20">
+        <div class="mb-12">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-tertiary mb-3 block">Editorial Highlight</span>
+          <h2 class="font-headline text-3xl md:text-5xl text-primary font-bold">Alistel: San Juan, La Union</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div class="relative">
+            <div class="aspect-[4/5] overflow-hidden rounded-xl editorial-shadow">
+              <img
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzKt1F0Jm6HYf6tRKJs4nlJ7niviTwzNbqW_aNRx-j5kbm8mgg3MJVJPppLjhDML0CBZ-mMBjwz4ho4UZIEkTijO7i4sicgG-kua6OWIAWy2dImS-oCp3z_ZB7Lsy_564wK7IUI8CVrfd9cgUePF84f7HorEQKMrHtYF5OLpvP-4LeBiik6ZesJGn9mPvClngEczqt8lDifFx1tkq6KoDOJVlOpVDLhf3G0j0ZdbsaFnGyismmOAEdQHQg-g8qUEkYUFoPsY4GrINr"
+                alt="Alistel — luxury property in San Juan, La Union"
+              >
+            </div>
+            <!-- Gold accent badge -->
+            <div class="absolute -bottom-6 -right-4 md:-right-8 bg-tertiary-container p-5 md:p-6 hidden sm:block">
+              <p class="text-on-tertiary-container font-headline text-sm font-bold">The Digital Curator</p>
+            </div>
+          </div>
+          <div>
+            <span class="material-symbols-outlined text-4xl text-tertiary-container mb-4 block" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            <p class="font-headline text-2xl md:text-3xl italic text-primary leading-relaxed mb-8">
+              Khemia transformed our vacation home into a high-yielding boutique stay.
+            </p>
+            <div class="space-y-4 text-on-surface-variant text-sm leading-relaxed mb-10">
+              <p>What began as a near-beach plot became a benchmark for Philippine coastal living. Strategic spatial planning, intentional interior curation, and Khemia's white-glove management framework transformed Alistel into a premium lifestyle asset.</p>
+            </div>
+            <!-- Mini Stats -->
+            <div class="grid grid-cols-3 gap-4 mb-10">
+              <div class="text-center py-4 bg-surface rounded-lg">
+                <p class="font-headline text-2xl text-primary font-bold">Top 1%</p>
+                <p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Airbnb</p>
+              </div>
+              <div class="text-center py-4 bg-surface rounded-lg">
+                <p class="font-headline text-2xl text-primary font-bold">95%</p>
+                <p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Occupancy</p>
+              </div>
+              <div class="text-center py-4 bg-surface rounded-lg">
+                <p class="font-headline text-2xl text-primary font-bold">5.0</p>
+                <p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Rating</p>
+              </div>
+            </div>
+            <a href="alistel.html" class="inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-opacity editorial-shadow">
+              View Full Showcase
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES OVERVIEW ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-16 flex flex-col md:flex-row md:justify-between md:items-end gap-6">
+          <div>
+            <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-4 block">What We Offer</span>
+            <h2 class="font-headline text-3xl md:text-5xl text-primary font-bold">End-to-End Management</h2>
+          </div>
+          <a href="services.html" class="text-primary font-semibold text-sm border-b border-primary pb-1 hover:opacity-70 transition-opacity self-start md:self-auto">View All Services →</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="group p-8 bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl cursor-pointer">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">campaign</span>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Property Marketing</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Listing optimization across Airbnb, Booking.com, and private channels.</p>
+          </div>
+          <div class="group p-8 bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl cursor-pointer">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">concierge</span>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Guest Relations</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">White-glove hospitality from inquiry to checkout and post-stay review management.</p>
+          </div>
+          <div class="group p-8 bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl cursor-pointer">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">home_repair_service</span>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Maintenance</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Proactive upkeep, vetted vendor network, and 24/7 emergency response.</p>
+          </div>
+          <div class="group p-8 bg-surface-container-low hover:bg-surface-container transition-colors duration-200 rounded-xl cursor-pointer">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">bar_chart</span>
+            <h3 class="font-headline text-lg text-primary font-bold mb-3">Financial Reporting</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Monthly P&L reports, occupancy analytics, and ROI projections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== TARGET AUDIENCES ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface-container-low">
+      <div class="max-w-screen-xl mx-auto">
+        <h2 class="font-headline text-3xl md:text-5xl text-primary font-bold mb-4 text-center">Engineered for Success</h2>
+        <p class="text-on-surface-variant text-center mb-16 max-w-md mx-auto leading-relaxed">Specialized solutions for every type of Philippine real estate owner.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- OFW Investors -->
+          <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-xl hover:editorial-shadow transition-all duration-300 border-b-2 border-transparent hover:border-tertiary-container">
+            <span class="material-symbols-outlined text-3xl text-primary mb-6 block">public</span>
+            <h3 class="font-headline text-xl text-primary font-bold mb-3">OFW Investors</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Remote management solutions for global Filipinos building a domestic legacy from abroad.</p>
+            <a href="services.html" class="text-xs font-bold uppercase tracking-wider text-primary border-b border-primary/20 pb-1 hover:border-primary transition-colors">Discover Platform</a>
+          </div>
+          <!-- Portfolio Holders -->
+          <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-xl hover:editorial-shadow transition-all duration-300 border-b-2 border-transparent hover:border-tertiary-container">
+            <span class="material-symbols-outlined text-3xl text-primary mb-6 block">domain_add</span>
+            <h3 class="font-headline text-xl text-primary font-bold mb-3">Portfolio Holders</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Optimization and yield management for owners with multi-asset property portfolios.</p>
+            <a href="services.html" class="text-xs font-bold uppercase tracking-wider text-primary border-b border-primary/20 pb-1 hover:border-primary transition-colors">Asset Audit</a>
+          </div>
+          <!-- Leisure Estates -->
+          <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-xl hover:editorial-shadow transition-all duration-300 border-b-2 border-transparent hover:border-tertiary-container">
+            <span class="material-symbols-outlined text-3xl text-primary mb-6 block">beach_access</span>
+            <h3 class="font-headline text-xl text-primary font-bold mb-3">Leisure Estates</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Curating exceptional lifestyle experiences for high-end vacation rental properties.</p>
+            <a href="services.html" class="text-xs font-bold uppercase tracking-wider text-primary border-b border-primary/20 pb-1 hover:border-primary transition-colors">Explore Hospitality</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FINAL CTA ====== -->
+    <section class="py-32 md:py-40 px-6 md:px-20 text-center bg-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.08]">
+        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBwoYqj3OUoQ9Y0xfbAkGKQ-QrPQzMV20KJX5ZXcrDwI3F-HHuY3S7ygciK3cmJ__dn1_NBLA_xKpRJ58bi8lC0XB-LunJYmDo4rlip-e2inzbddYc55Y-pBy9wglGKi1wF7msN2N9QJTmQndENVDHi3ObRH5fzJpqLCEZdN0Ul1TsdrIMNPA4B5ki-hQ6MWOjUE175Gg9CS1KJOKWuWJrkv8nUyIlXRdZQFNR-xniwtHnaokKDUSZZ_5msvdmmXcL08" alt="">
+      </div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <span class="text-tertiary-container font-bold tracking-[0.2em] text-xs uppercase mb-8 block">Investment Opportunity</span>
+        <h2 class="font-headline text-4xl md:text-6xl text-surface leading-tight mb-12 -tracking-wider">
+          Maximize Your ROI.<br>Partner with Khemia.
+        </h2>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a href="contact.html" class="px-10 py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg hover:opacity-90 transition-opacity">Inquire Now</a>
+          <a href="alistel.html" class="text-surface font-semibold px-10 py-5 group hover:text-tertiary-container transition-colors">
+            View Portfolio <span class="inline-block transition-transform group-hover:translate-x-2">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-surface-container-low w-full py-16">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-8 w-8">
+          <span class="text-base font-headline font-bold text-primary tracking-widest uppercase">Khemia</span>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+          Elevating Philippine real estate from passive property to high-performing investment.
+        </p>
+        <p class="text-on-surface-variant text-xs">© 2024 Khemia Properties. The Digital Curator.</p>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="index.html">Portfolio</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="services.html">Management Services</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="alistel.html">Alistel Showcase</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="contact.html">Investor Relations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Legal</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Privacy Policy</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Terms of Service</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Investment Disclosure</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Owner Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Contact</h4>
+        <p class="text-on-surface-variant text-sm mb-2">Manila, Philippines</p>
+        <p class="text-on-surface-variant text-sm mb-2">San Juan, La Union</p>
+        <a href="mailto:concierge@khemia.com" class="text-on-surface-variant text-sm mb-8 block hover:text-primary transition-colors">concierge@khemia.com</a>
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">public</span>
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">send</span>
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">share</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Nav (visible only on small screens) -->
+  <nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-2 pt-2 pb-4">
+    <a href="index.html" class="flex flex-col items-center justify-center text-primary px-2 py-1">
+      <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">domain</span>
+      <span class="font-label text-[9px] font-bold uppercase tracking-wider mt-1">Portfolio</span>
+    </a>
+    <a href="services.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">home_repair_service</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Services</span>
+    </a>
+    <a href="alistel.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">bungalow</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Alistel</span>
+    </a>
+    <a href="contact.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">mail</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Contact</span>
+    </a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        menu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.remove('translate-x-0');
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+
+</body>
+</html>

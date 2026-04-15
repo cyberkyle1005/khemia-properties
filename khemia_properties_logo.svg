@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="460" height="120">
+  <defs>
+    <linearGradient id="triGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B3A8A"/>
+      <stop offset="100%" style="stop-color:#254aaa"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af5a"/>
+      <stop offset="100%" style="stop-color:#b8922e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem: upward triangle (growth/assets) with alchemical inner mark -->
+  <!-- Outer upward triangle -->
+  <polygon points="60,14 94,72 26,72"
+           fill="none" stroke="#1B3A8A" stroke-width="2.5"/>
+  <!-- Inner inverted triangle (alchemical balance) -->
+  <polygon points="60,30 79,62 41,62"
+           fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.65"/>
+  <!-- Horizontal bar across middle (classic alchemical earth symbol variant) -->
+  <line x1="47" y1="47" x2="73" y2="47" stroke="#c9a84c" stroke-width="1.4" opacity="0.8"/>
+  <!-- Center dot -->
+  <circle cx="60" cy="47" r="2.5" fill="#1B3A8A"/>
+
+  <!-- Wordmark: KHEMIA large -->
+  <text x="112" y="48"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="26"
+        font-weight="400"
+        letter-spacing="5.5"
+        fill="#1B3A8A">KHEMIA</text>
+
+  <!-- Gold accent bar -->
+  <rect x="112" y="55" width="150" height="1" fill="#c9a84c" opacity="0.75"/>
+
+  <!-- Subtitle: PROPERTIES -->
+  <text x="112" y="72"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="12"
+        font-weight="400"
+        letter-spacing="7"
+        fill="#4a6cb8">PROPERTIES</text>
+</svg>
