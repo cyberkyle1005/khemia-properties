@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luma | Surf & Nature Villa by Khemia Properties</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236c","primary-container": "#1b3a8a","on-primary": "#ffffff","primary-fixed": "#dbe1ff","primary-fixed-dim": "#b5c4ff","on-primary-fixed": "#00174d","on-primary-fixed-variant": "#244191","on-primary-container": "#8ea8ff","inverse-primary": "#b5c4ff","secondary": "#545d7e","secondary-container": "#cdd6fd","on-secondary": "#ffffff","on-secondary-container": "#535c7d","secondary-fixed": "#dbe1ff","secondary-fixed-dim": "#bcc5eb","on-secondary-fixed": "#101a37","on-secondary-fixed-variant": "#3c4665","tertiary": "#755b00","tertiary-container": "#c8a74b","on-tertiary": "#ffffff","on-tertiary-container": "#4f3d00","tertiary-fixed": "#ffe08f","tertiary-fixed-dim": "#e6c364","on-tertiary-fixed": "#241a00","on-tertiary-fixed-variant": "#584400","surface": "#faf8ff","surface-dim": "#dad9e1","surface-bright": "#faf8ff","surface-container-lowest": "#ffffff","surface-container-low": "#f4f3fa","surface-container": "#eeedf5","surface-container-high": "#e9e7ef","surface-container-highest": "#e3e1e9","surface-variant": "#e3e1e9","surface-tint": "#3f5aab","on-surface": "#1a1b21","on-surface-variant": "#444651","on-background": "#1a1b21","background": "#faf8ff","outline": "#757683","outline-variant": "#c4c6d3","inverse-surface": "#2f3036","inverse-on-surface": "#f1f0f7","error": "#ba1a1a","on-error": "#ffffff","error-container": "#ffdad6","on-error-container": "#93000a"
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+          fontFamily: { "headline": ["Noto Serif","Georgia","serif"], "body": ["Manrope","sans-serif"], "label": ["Manrope","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .editorial-shadow { box-shadow: 0 24px 48px rgba(26,27,33,0.06); }
+    .glass-nav { background: rgba(250,248,255,0.75); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-container selection:text-on-tertiary-container">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full z-50 glass-nav">
+    <nav class="flex justify-between items-center px-6 md:px-20 py-4 md:py-5 w-full max-w-screen-xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-32 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Home</a>
+        <a href="services.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Services</a>
+        <a href="portfolio.html" class="text-primary border-b border-primary pb-0.5 text-sm font-medium">Portfolio</a>
+        <a href="contact.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">About</a>
+        <a href="contact.html" class="ml-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">Inquire Now</a>
+      </div>
+      <button class="md:hidden flex items-center justify-center" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-12">
+      <span class="text-xl font-headline font-bold tracking-widest text-surface uppercase">Khemia</span>
+      <button class="text-surface" onclick="toggleMenu()"><span class="material-symbols-outlined text-3xl">close</span></button>
+    </div>
+    <nav class="flex flex-col gap-8">
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="index.html" onclick="toggleMenu()">Home</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="services.html" onclick="toggleMenu()">Services</a>
+      <a class="font-headline text-3xl text-tertiary-container" href="portfolio.html" onclick="toggleMenu()">Portfolio</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">About Us</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">Contact</a>
+    </nav>
+    <div class="mt-auto">
+      <a href="contact.html" onclick="toggleMenu()" class="block w-full py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg text-center">Inquire Now</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative h-[90vh] min-h-[600px] flex items-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover" src="images/alistel-kitchen.jpg" alt="Luma — Siargao, Surigao del Norte">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
+      </div>
+      <div class="relative z-10 px-6 md:px-20 pb-16 md:pb-24 max-w-screen-xl w-full">
+        <a href="portfolio.html" class="inline-flex items-center gap-1.5 text-white/70 text-xs font-medium mb-6 hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          Back to Portfolio
+        </a>
+        <span class="inline-block px-3 py-1 mb-6 text-[10px] tracking-[0.2em] uppercase font-bold text-on-tertiary bg-tertiary-container rounded-lg">Khemia Properties · Surf & Nature</span>
+        <h1 class="text-white font-headline text-4xl md:text-6xl lg:text-7xl leading-tight mb-4 -tracking-wider">
+          Luma: Where Surf<br class="hidden md:block"> Meets Serenity
+        </h1>
+        <p class="text-white/90 font-body text-lg md:text-2xl tracking-wide font-light">General Luna, Siargao, Surigao del Norte</p>
+      </div>
+    </section>
+
+    <!-- THE VISION -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+        <div class="md:w-1/2">
+          <div class="w-16 h-1 bg-tertiary-container mb-10"></div>
+          <h2 class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-8">
+            The Island's<br><em>Finest Address</em>
+          </h2>
+          <div class="space-y-5 text-on-surface-variant text-base md:text-lg leading-relaxed max-w-lg">
+            <p>Siargao is the Philippines' surf capital — and Luma sits minutes from Cloud 9, the world-famous break that draws wave-riders from every corner of the globe. But Luma is more than a surfer's base camp.</p>
+            <p>Designed with tropical minimalism, natural materials, and a deep respect for the island's raw ecology, Luma is a sanctuary where guests who never touch a surfboard leave just as transformed as those who do.</p>
+          </div>
+        </div>
+        <div class="md:w-1/2 relative">
+          <div class="aspect-[4/5] bg-surface-container-low overflow-hidden editorial-shadow rounded-xl">
+            <img class="w-full h-full object-cover" src="images/alistel-veranda.jpg" alt="Luma interiors">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-16 px-6 md:px-20 bg-primary">
+      <div class="max-w-screen-xl mx-auto grid grid-cols-3 gap-8 text-center">
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">91%</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Occupancy Rate</p>
+        </div>
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">4.9</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Guest Rating</p>
+        </div>
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">29%</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Annual ROI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface-container-low">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-16">
+          <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-3 block">Signature Amenities</span>
+          <h2 class="font-headline text-3xl md:text-4xl text-primary">Island Living, Refined</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex gap-5 items-start">
+            <div class="p-4 bg-surface rounded-xl text-primary flex-shrink-0"><span class="material-symbols-outlined text-2xl">surfing</span></div>
+            <div>
+              <h3 class="font-headline text-lg text-primary mb-2">Cloud 9 Access</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Minutes from the iconic Cloud 9 reef break — surfboard and gear rental arranged on request.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-4 bg-surface rounded-xl text-primary flex-shrink-0"><span class="material-symbols-outlined text-2xl">eco</span></div>
+            <div>
+              <h3 class="font-headline text-lg text-primary mb-2">Eco-Conscious Design</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Built with reclaimed wood, bamboo accents, and passive cooling — low impact, maximum comfort.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-4 bg-surface rounded-xl text-primary flex-shrink-0"><span class="material-symbols-outlined text-2xl">kayaking</span></div>
+            <div>
+              <h3 class="font-headline text-lg text-primary mb-2">Island Hopping</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Khemia-arranged island tours to Naked Island, Daku Island, and the Siargao lagoons.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-4 bg-surface rounded-xl text-primary flex-shrink-0"><span class="material-symbols-outlined text-2xl">spa</span></div>
+            <div>
+              <h3 class="font-headline text-lg text-primary mb-2">Garden Wellness Area</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">An open-air yoga deck and garden spa nook — for recovery days between sessions in the water.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-4 bg-surface rounded-xl text-primary flex-shrink-0"><span class="material-symbols-outlined text-2xl">restaurant</span></div>
+            <div>
+              <h3 class="font-headline text-lg text-primary mb-2">Private Chef Option</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Local chef service for in-villa meals featuring fresh Siargao seafood and island produce.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-4 bg-surface rounded-xl text-primary flex-shrink-0"><span class="material-symbols-outlined text-2xl">wifi</span></div>
+            <div>
+              <h3 class="font-headline text-lg text-primary mb-2">Reliable Connectivity</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Satellite-backed Wi-Fi — fast enough to work, reliable enough to share those sunset shots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 md:py-40 px-6 md:px-20 text-center bg-surface">
+      <div class="max-w-3xl mx-auto">
+        <span class="text-tertiary font-bold tracking-[0.2em] text-xs uppercase mb-8 block">Investment Opportunity</span>
+        <h2 class="font-headline text-4xl md:text-6xl text-primary leading-tight mb-12 -tracking-wider">
+          Replicate this Success.<br>Partner with Khemia Properties.
+        </h2>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a href="contact.html" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-5 rounded-lg text-base font-bold editorial-shadow hover:opacity-90 transition-all transform hover:-translate-y-1">Inquire Now</a>
+          <a href="portfolio.html" class="text-primary font-semibold px-10 py-5 group hover:text-primary-container transition-colors">
+            View All Properties <span class="inline-block transition-transform group-hover:translate-x-2">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-container-low w-full py-16">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-10 w-auto">
+          <span class="text-base font-headline font-bold text-primary tracking-widest uppercase">Khemia</span>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Elevating Philippine real estate from passive property to high-performing investment.</p>
+        <p class="text-on-surface-variant text-xs">© 2024 Khemia Properties.</p>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Explore</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="services.html">Management Services</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="portfolio.html">Portfolio</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="contact.html">Investor Relations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Legal</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Owner Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Contact</h4>
+        <p class="text-on-surface-variant text-sm mb-2">Manila, Philippines</p>
+        <a href="mailto:concierge@khemia.com" class="text-on-surface-variant text-sm mb-8 block hover:text-primary transition-colors">concierge@khemia.com</a>
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">public</span>
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">send</span>
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">share</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-2 pt-2 pb-4">
+    <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">domain</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Home</span>
+    </a>
+    <a href="services.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">home_repair_service</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Services</span>
+    </a>
+    <a href="portfolio.html" class="flex flex-col items-center justify-center text-primary px-2 py-1">
+      <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bungalow</span>
+      <span class="font-label text-[9px] font-bold uppercase tracking-wider mt-1">Portfolio</span>
+    </a>
+    <a href="contact.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">mail</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Contact</span>
+    </a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        menu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.remove('translate-x-0');
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+
+</body>
+</html>

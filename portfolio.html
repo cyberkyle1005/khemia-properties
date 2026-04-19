@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Khemia Properties</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236c",
+            "primary-container": "#1b3a8a",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dbe1ff",
+            "primary-fixed-dim": "#b5c4ff",
+            "on-primary-fixed": "#00174d",
+            "on-primary-fixed-variant": "#244191",
+            "on-primary-container": "#8ea8ff",
+            "inverse-primary": "#b5c4ff",
+            "secondary": "#545d7e",
+            "secondary-container": "#cdd6fd",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#535c7d",
+            "secondary-fixed": "#dbe1ff",
+            "secondary-fixed-dim": "#bcc5eb",
+            "on-secondary-fixed": "#101a37",
+            "on-secondary-fixed-variant": "#3c4665",
+            "tertiary": "#755b00",
+            "tertiary-container": "#c8a74b",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#4f3d00",
+            "tertiary-fixed": "#ffe08f",
+            "tertiary-fixed-dim": "#e6c364",
+            "on-tertiary-fixed": "#241a00",
+            "on-tertiary-fixed-variant": "#584400",
+            "surface": "#faf8ff",
+            "surface-dim": "#dad9e1",
+            "surface-bright": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f3fa",
+            "surface-container": "#eeedf5",
+            "surface-container-high": "#e9e7ef",
+            "surface-container-highest": "#e3e1e9",
+            "surface-variant": "#e3e1e9",
+            "surface-tint": "#3f5aab",
+            "on-surface": "#1a1b21",
+            "on-surface-variant": "#444651",
+            "on-background": "#1a1b21",
+            "background": "#faf8ff",
+            "outline": "#757683",
+            "outline-variant": "#c4c6d3",
+            "inverse-surface": "#2f3036",
+            "inverse-on-surface": "#f1f0f7",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif", "Georgia", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px rgba(26, 27, 33, 0.06);
+    }
+    .glass-nav {
+      background: rgba(250, 248, 255, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    .property-card:hover .card-img {
+      transform: scale(1.05);
+    }
+    .card-img {
+      transition: transform 0.7s ease;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="fixed top-0 w-full z-50 glass-nav">
+    <nav class="flex justify-between items-center px-6 md:px-20 py-4 md:py-5 w-full max-w-screen-xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-32 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Home</a>
+        <a href="services.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">Services</a>
+        <a href="portfolio.html" class="text-primary border-b border-primary pb-0.5 text-sm font-medium">Portfolio</a>
+        <a href="contact.html" class="text-on-surface-variant text-sm font-medium hover:text-primary transition-colors duration-200">About</a>
+        <a href="contact.html" class="ml-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">Inquire Now</a>
+      </div>
+      <button class="md:hidden flex items-center justify-center" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Slide-in Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-12">
+      <span class="text-xl font-headline font-bold tracking-widest text-surface uppercase">Khemia</span>
+      <button class="text-surface" onclick="toggleMenu()">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-8">
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="index.html" onclick="toggleMenu()">Home</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="services.html" onclick="toggleMenu()">Services</a>
+      <a class="font-headline text-3xl text-tertiary-container" href="portfolio.html" onclick="toggleMenu()">Portfolio</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">About Us</a>
+      <a class="font-headline text-3xl text-surface hover:text-tertiary-container transition-colors" href="contact.html" onclick="toggleMenu()">Contact</a>
+    </nav>
+    <div class="mt-auto">
+      <a href="contact.html" onclick="toggleMenu()" class="block w-full py-5 bg-tertiary-container text-on-tertiary-container font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg text-center">Inquire Now</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="relative h-[60vh] min-h-[420px] flex items-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          src="images/alistel-exterior.jpg"
+          alt="Khemia Properties Portfolio"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/30 to-transparent"></div>
+      </div>
+      <div class="relative z-10 w-full px-6 md:px-20 pb-16 md:pb-24 max-w-screen-xl mx-auto">
+        <span class="inline-block text-tertiary-container font-label text-xs uppercase tracking-[0.2em] mb-5">Managed Properties · Philippines</span>
+        <h1 class="font-headline text-4xl md:text-6xl text-surface font-bold leading-tight -tracking-wider">
+          The Khemia Portfolio
+        </h1>
+        <p class="text-surface/75 text-base md:text-lg mt-4 max-w-lg leading-relaxed">
+          A curated collection of high-performing Philippine properties — each one transformed into a premium lifestyle asset.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== PROPERTY GRID ====== -->
+    <section class="py-24 md:py-32 px-6 md:px-20 bg-surface">
+      <div class="max-w-screen-xl mx-auto">
+
+        <div class="mb-16 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+          <div>
+            <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-3 block">Our Properties</span>
+            <h2 class="font-headline text-3xl md:text-4xl text-primary font-bold">5 Properties Under Management</h2>
+          </div>
+          <p class="text-on-surface-variant text-sm max-w-xs leading-relaxed">Each property is individually managed with institutional-grade standards and white-glove hospitality.</p>
+        </div>
+
+        <!-- Featured Card: Alistel -->
+        <a href="alistel.html" class="property-card group block mb-6 rounded-xl overflow-hidden editorial-shadow relative">
+          <div class="aspect-[16/7] md:aspect-[21/9] overflow-hidden">
+            <img class="card-img w-full h-full object-cover" src="images/alistel-veranda.jpg" alt="Alistel — San Juan, La Union">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <span class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest rounded-lg mb-4">Featured · Coastal Luxury</span>
+              <h3 class="font-headline text-3xl md:text-5xl text-white font-bold leading-tight mb-2">Alistel</h3>
+              <p class="text-white/70 text-sm flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-base">location_on</span>
+                Ili Sur, San Juan, La Union
+              </p>
+            </div>
+            <div class="flex gap-6 md:gap-10 shrink-0">
+              <div class="text-center">
+                <p class="font-headline text-2xl text-white font-bold">Top 1%</p>
+                <p class="text-white/60 text-[10px] uppercase tracking-widest mt-0.5">Airbnb</p>
+              </div>
+              <div class="text-center">
+                <p class="font-headline text-2xl text-white font-bold">95%</p>
+                <p class="text-white/60 text-[10px] uppercase tracking-widest mt-0.5">Occupancy</p>
+              </div>
+              <div class="text-center">
+                <p class="font-headline text-2xl text-white font-bold">5.0</p>
+                <p class="text-white/60 text-[10px] uppercase tracking-widest mt-0.5">Rating</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute top-6 right-6 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold px-4 py-2 rounded-lg flex items-center gap-2 group-hover:bg-white/20 transition-colors">
+            Explore Property
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+          </div>
+        </a>
+
+        <!-- 4 Property Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Siena -->
+          <a href="siena.html" class="property-card group block rounded-xl overflow-hidden bg-surface-container-low editorial-shadow">
+            <div class="aspect-[4/3] overflow-hidden relative">
+              <img class="card-img w-full h-full object-cover" src="images/alistel-lounge.jpg" alt="Siena — Tagaytay, Cavite">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 bg-primary/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest rounded-lg">Highland Retreat</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-primary font-bold mb-1">Siena</h3>
+              <p class="text-on-surface-variant text-xs flex items-center gap-1 mb-4">
+                <span class="material-symbols-outlined text-sm">location_on</span>
+                Tagaytay, Cavite
+              </p>
+              <div class="flex gap-4 mb-5">
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">92%</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Occupancy</p>
+                </div>
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">4.9</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Rating</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-primary text-xs font-semibold group-hover:gap-3 transition-all">
+                View Property
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Marea -->
+          <a href="marea.html" class="property-card group block rounded-xl overflow-hidden bg-surface-container-low editorial-shadow">
+            <div class="aspect-[4/3] overflow-hidden relative">
+              <img class="card-img w-full h-full object-cover" src="images/alistel-bedroom.jpg" alt="Marea — El Nido, Palawan">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 bg-primary/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest rounded-lg">Beachfront Villa</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-primary font-bold mb-1">Marea</h3>
+              <p class="text-on-surface-variant text-xs flex items-center gap-1 mb-4">
+                <span class="material-symbols-outlined text-sm">location_on</span>
+                El Nido, Palawan
+              </p>
+              <div class="flex gap-4 mb-5">
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">97%</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Occupancy</p>
+                </div>
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">5.0</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Rating</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-primary text-xs font-semibold group-hover:gap-3 transition-all">
+                View Property
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Viento -->
+          <a href="viento.html" class="property-card group block rounded-xl overflow-hidden bg-surface-container-low editorial-shadow">
+            <div class="aspect-[4/3] overflow-hidden relative">
+              <img class="card-img w-full h-full object-cover" src="images/alistel-living.jpg" alt="Viento — Laiya, Batangas">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 bg-primary/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest rounded-lg">Weekend Retreat</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-primary font-bold mb-1">Viento</h3>
+              <p class="text-on-surface-variant text-xs flex items-center gap-1 mb-4">
+                <span class="material-symbols-outlined text-sm">location_on</span>
+                Laiya, Batangas
+              </p>
+              <div class="flex gap-4 mb-5">
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">89%</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Occupancy</p>
+                </div>
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">4.8</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Rating</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-primary text-xs font-semibold group-hover:gap-3 transition-all">
+                View Property
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Luma -->
+          <a href="luma.html" class="property-card group block rounded-xl overflow-hidden bg-surface-container-low editorial-shadow">
+            <div class="aspect-[4/3] overflow-hidden relative">
+              <img class="card-img w-full h-full object-cover" src="images/alistel-kitchen.jpg" alt="Luma — Siargao, Surigao del Norte">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 bg-primary/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest rounded-lg">Surf & Nature</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-primary font-bold mb-1">Luma</h3>
+              <p class="text-on-surface-variant text-xs flex items-center gap-1 mb-4">
+                <span class="material-symbols-outlined text-sm">location_on</span>
+                Siargao, Surigao del Norte
+              </p>
+              <div class="flex gap-4 mb-5">
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">91%</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Occupancy</p>
+                </div>
+                <div>
+                  <p class="font-headline text-lg text-primary font-bold">4.9</p>
+                  <p class="text-on-surface-variant text-[9px] uppercase tracking-widest">Rating</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-primary text-xs font-semibold group-hover:gap-3 transition-all">
+                View Property
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== STATS STRIP ====== -->
+    <section class="py-16 px-6 md:px-20 bg-primary">
+      <div class="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">5</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Properties Managed</p>
+        </div>
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">93%</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Avg. Occupancy</p>
+        </div>
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">4.9</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Avg. Guest Rating</p>
+        </div>
+        <div>
+          <p class="font-headline text-4xl md:text-5xl text-surface font-bold">28%</p>
+          <p class="text-surface/60 text-xs uppercase tracking-widest mt-2">Avg. ROI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="py-32 md:py-40 px-6 md:px-20 text-center bg-surface-container-low">
+      <div class="max-w-3xl mx-auto">
+        <span class="text-tertiary font-bold tracking-[0.2em] text-xs uppercase mb-8 block">Join the Portfolio</span>
+        <h2 class="font-headline text-4xl md:text-5xl text-primary leading-tight mb-6 -tracking-wider">
+          Have a property in mind?<br>Let Khemia manage it.
+        </h2>
+        <p class="text-on-surface-variant mb-12 max-w-lg mx-auto leading-relaxed">We transform underperforming properties into high-yield assets. Talk to us about onboarding your property into the Khemia portfolio.</p>
+        <a href="contact.html" class="inline-block px-10 py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold tracking-widest rounded-lg text-sm uppercase shadow-lg hover:opacity-90 transition-opacity editorial-shadow">Inquire Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-surface-container-low w-full py-16">
+    <div class="max-w-screen-xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="khemia_properties_logo.svg" alt="Khemia Properties" class="h-10 w-auto">
+          <span class="text-base font-headline font-bold text-primary tracking-widest uppercase">Khemia</span>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+          Elevating Philippine real estate from passive property to high-performing investment.
+        </p>
+        <p class="text-on-surface-variant text-xs">© 2024 Khemia Properties.</p>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="index.html">Home</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="services.html">Management Services</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="portfolio.html">Portfolio</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="contact.html">Investor Relations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Legal</h4>
+        <ul class="space-y-4">
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Privacy Policy</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Terms of Service</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Investment Disclosure</a></li>
+          <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors hover:underline decoration-tertiary-container underline-offset-4" href="#">Owner Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-primary mb-6 font-bold text-sm uppercase tracking-wider">Contact</h4>
+        <p class="text-on-surface-variant text-sm mb-2">Manila, Philippines</p>
+        <p class="text-on-surface-variant text-sm mb-2">San Juan, La Union</p>
+        <a href="mailto:concierge@khemia.com" class="text-on-surface-variant text-sm mb-8 block hover:text-primary transition-colors">concierge@khemia.com</a>
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">public</span>
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">send</span>
+          <span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-container transition-colors">share</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface border-t border-outline-variant/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] flex justify-around items-center px-2 pt-2 pb-4">
+    <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">domain</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Home</span>
+    </a>
+    <a href="services.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">home_repair_service</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Services</span>
+    </a>
+    <a href="portfolio.html" class="flex flex-col items-center justify-center text-primary px-2 py-1">
+      <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bungalow</span>
+      <span class="font-label text-[9px] font-bold uppercase tracking-wider mt-1">Portfolio</span>
+    </a>
+    <a href="contact.html" class="flex flex-col items-center justify-center text-on-surface-variant/60 px-2 py-1 hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">mail</span>
+      <span class="font-label text-[9px] font-medium uppercase tracking-wider mt-1">Contact</span>
+    </a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        menu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.remove('translate-x-0');
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+
+</body>
+</html>
